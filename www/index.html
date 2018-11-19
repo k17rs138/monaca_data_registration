@@ -11,10 +11,10 @@
         var ncmb = new NCMB(appKey, clientKey);
 
         function startDemo() {
-            var TestClass = ncmb.DataStore("TestClass1");
+            var TestClass = ncmb.DataStore("TestClass");
             var testClass = new TestClass();
-            var key   = "test0";
-            var value = "Hello, KSU";
+            var key   = "message";
+            var value = "Hello, NCMB!";
             testClass.set(key, value);
             testClass.save()
                 .then(function() {
@@ -32,5 +32,8 @@
     <h1>NiftyCloud mobile backend!</h1>
     <a class="button--large" onclick="startDemo()">Start Demo</a>
     <div>Touch Start Demo to save {"message":"Hello, NCMB!"} to mobile backend.</div>
+    <a class="button--large" oneclick="fetchDemo()">Fetch Demo</a>
+    <div>fetch demo</div>
+    <div id="fetch">data here</div>
 </body>
 </html>
